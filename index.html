@@ -11,12 +11,14 @@
         <fieldset>
             <legend>Search Parks</legend>
             <label for="searching-states">States to Search:</label>
-            <input type="text" id="searching-states"></input>
+            <input type="text" id="searching-states"></input><br>
             <label for="max-results">Max Results:</label>
-            <input type="text" id="max-results"></input>
+            <input type="text" id="max-results" value="10"></input>
             <input type="submit">
         </fieldset>
     </form>
-    <div id="search-results"></div>
+    <ul id="search-results"></ul>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
