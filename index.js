@@ -17,8 +17,7 @@ function handleSearch() {
       .then(result => result.json())
       .then(data => {
         store.results = [];
-        for (let i = 0; i < maxResults && i < data.total; i++) {
-          console.log(i, maxResults, data.total, store.results.length); 
+        for (let i = 0; i < maxResults && i < data.total; i++) { 
           store.results.push({
             name: data.data[i].name,
             description: data.data[i].description,
@@ -36,14 +35,10 @@ function generateHtml(ele) {
 
 function render() {
   let htmlStr = '';
-  let count = 0;
   store.results.forEach(function(ele) {
     htmlStr += generateHtml(ele);
-    count++;
-    console.log(count);
   });
   $('#search-results').html(htmlStr);
-  console.log(htmlStr);
 }
 
 function main() {
